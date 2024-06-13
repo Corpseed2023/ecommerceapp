@@ -37,6 +37,23 @@ li:hover {
   text-decoration: none;
 }
 
+.load-btn {
+  padding: 10px 20px;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  background: #ff3e6c;
+  color: #fff;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 2px;
+}
+
+.load-btn:hover {
+  transform: scale(1.1);
+}
+
+
+
 .footer{
   display: flex;
   justify-content: space-between;
