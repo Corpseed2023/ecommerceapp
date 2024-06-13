@@ -3,15 +3,21 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginPage from './Login/LoginPage';
 import MainPage from './Main/MainPage';
-import SignupPage from './Login/SignupPage';
+import SignUpPage from './Login/SignUpPage';
 import NoPageFound from './Components/NoPageFound';
+import DashBoardPage from './Main/DashBoardPage';
+import ProductPage from './Main/ProductPage';
+import SingleProductPage from './Main/SingleProductPage';
 
 function App() {
   return (
   <BrowserRouter>
   <Routes>
-  <Route path="/" element={<MainPage />} />
-  <Route path="/signup" element={<SignupPage />} />
+  <Route path="/" element={<MainPage />}>
+  <Route path="/" element={<ProductPage />} />
+  <Route path="/product/:id" element={<SingleProductPage />} />
+  </Route>
+  <Route path="/signup" element={<SignUpPage />} />
     <Route path="/login" element={<LoginPage />} />
     <Route path="*" element={<NoPageFound />} />
 
